@@ -15,6 +15,6 @@ class MessageController extends Controller
     public function test(Request $request)
     {
         $message = $request->input('message');
-        return response()->json(['msg' => $message]);
+        throw new \Exception($message);
     }
 }
