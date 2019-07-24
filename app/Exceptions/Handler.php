@@ -41,7 +41,7 @@ class Handler extends ExceptionHandler
         if (app()->bound('sentry') && $this->shouldReport($exception)) {
             Log::info('2222....');
             app('sentry')->captureException($exception);
-            Log::info('333.........')
+            Log::info('333.........');
         }
         parent::report($exception);
     }
